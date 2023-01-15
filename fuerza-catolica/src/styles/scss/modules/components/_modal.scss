@@ -8,7 +8,7 @@
     pointer-events: none;
     --translate-modal: 100%;
     transition: opacity 0.25s;
-  
+
     &--header {
       @include desktop {
         position: static;
@@ -22,5 +22,6 @@
       opacity: 1;
       pointer-events: auto;
       --translate-modal: 0;
+
     }
   }
