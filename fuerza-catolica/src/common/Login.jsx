@@ -3,6 +3,16 @@ import logo from "../assets/img/logo.jpeg";
 import { Link } from "react-router-dom";
 
 class Login extends Component {
+  handleLogin = (e) => {
+    console.log("Logged");
+    e.preventDefault();
+  };
+
+  handleCreateAccount = (e) => {
+    alert("Contacte al administrador: gegarciam95@gmail.com");
+    e.preventDefault();
+  };
+
   render() {
     return (
       <section className="vh-100 gradient-form bg-dark">
@@ -18,14 +28,14 @@ class Login extends Component {
                       </div>
 
                       <form>
-                        <p>Por favor, ingrese a su cuenta</p>
+                        <p>Por favor, ingrese a su cuenta:</p>
 
                         <div className="form-outline mb-4">
                           <input
                             type="email"
                             id="form2Example11"
                             className="form-control"
-                            placeholder=""
+                            placeholder="User: admin Password: admin"
                           />
                           <label className="form-label">Usuario</label>
                         </div>
@@ -43,7 +53,7 @@ class Login extends Component {
                           <div>
                             <button
                               className="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
-                              type="button"
+                              onClick={this.handleLogin}
                             >
                               Iniciar sesión
                             </button>
@@ -58,8 +68,8 @@ class Login extends Component {
                           </div>
                           <div className="pt-3">
                             <button
-                              type="button"
                               className="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
+                              onClick={this.handleCreateAccount}
                             >
                               Crear Cuenta
                             </button>
