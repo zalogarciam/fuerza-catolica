@@ -1,10 +1,29 @@
 import React, { Component } from "react";
-import logo from "../assets/img/logo.jpeg";
-import { Link } from "react-router-dom";
+import logo from "../../assets/img/logo.jpeg";
+import { useNavigate } from "react-router-dom";
 
 class Login extends Component {
+  state = {
+    user: "",
+    password: "",
+  };
+
   handleLogin = (e) => {
-    console.log("Logged");
+    e.preventDefault();
+
+    console.log(this.state.user);
+    if (this.state.password === "admin" && this.state.user === "admin") {
+    } else {
+      alert(
+        "Datos invalidos, por favor utilice como usuario admin y clave admin"
+      );
+    }
+
+    e.preventDefault();
+  };
+
+  handleForgetPassword = (e) => {
+    alert("Contacte al administrador: gegarciam95@gmail.com");
     e.preventDefault();
   };
 
@@ -32,10 +51,12 @@ class Login extends Component {
 
                         <div className="form-outline mb-4">
                           <input
-                            type="email"
                             id="form2Example11"
                             className="form-control"
                             placeholder="User: admin Password: admin"
+                            onInput={(e) =>
+                              this.setState({ user: e.target.value })
+                            }
                           />
                           <label className="form-label">Usuario</label>
                         </div>
@@ -45,6 +66,9 @@ class Login extends Component {
                             type="password"
                             id="form2Example22"
                             className="form-control"
+                            onInput={(e) =>
+                              this.setState({ password: e.target.value })
+                            }
                           />
                           <label className="form-label">Contraseña</label>
                         </div>
@@ -58,7 +82,11 @@ class Login extends Component {
                               Iniciar sesión
                             </button>
                           </div>
-                          <a className="text-muted" href="#!">
+                          <a
+                            className="text-muted"
+                            href="#"
+                            onClick={this.handleForgetPassword}
+                          >
                             ¿Se te olvidó tu contraseña?
                           </a>
                         </div>
