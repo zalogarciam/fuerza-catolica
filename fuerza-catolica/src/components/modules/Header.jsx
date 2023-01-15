@@ -9,12 +9,12 @@ const Header = () => {
 
   const showMenu = () => {
     header.current.classList.add("header--move");
-    modal.current.classList.add("modal--show");
+    modal.current.classList.add("menumodal--show");
   };
 
   const hideMenu = () => {
     header.current.classList.remove("header--move");
-    modal.current.classList.remove("modal--show");
+    modal.current.classList.remove("menumodal--show");
   };
 
   return (
@@ -30,7 +30,11 @@ const Header = () => {
               height="56"
             />
           </Link>
-          <div className="modal modal--header" ref={modal} onClick={hideMenu}>
+          <div
+            className="menumodal menumodal--header"
+            ref={modal}
+            onClick={hideMenu}
+          >
             <ul
               className="list list--header"
               onClick={(e) => e.stopPropagation()}
