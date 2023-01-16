@@ -75,7 +75,10 @@ const Header = () => {
           </div>
         </nav>
       </header>
-      <div className="vh-100 d-flex justify-content-center align-items-center">
+      <div
+        className="d-flex justify-content-center align-items-center"
+        style={{ height: "25vh" }}
+      >
         <h1>Bienvenido: admin</h1>
       </div>
     </div>

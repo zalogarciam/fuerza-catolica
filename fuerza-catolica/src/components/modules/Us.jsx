@@ -4,7 +4,10 @@ const Us = () => {
   return (
     <div>
       <Header></Header>
-      <div className="container f-elements f-elements--header vh-100">
+      <div
+        className="container f-elements f-elements--header"
+        style={{ height: "50vh" }}
+      >
         <h1>
           Fuerza Catolica es un Grupo de Opinión Estudiantil que busca
           representar responsable y eficientemente al alumno santamariano,

@@ -2,7 +2,7 @@
     --padding-nav: 1.5rem;
     padding-top: var(--padding-nav);
     padding-bottom: var(--padding-nav);
-    background-color: var(--light-primary-shadow-color);
+    background-image: linear-gradient(to bottom, var(--light-primary-shadow-color), var(--light-secondary-shadow-color));
     &__logo {
       display: block;
       width: 64px;
