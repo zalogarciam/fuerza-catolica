@@ -1,6 +1,18 @@
 import Header from "./Header";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import useContact from "../../hooks/useContact";
+import { fetchReadContactData } from "../../redux/thunks/contactThunk";
 
 const Contact = () => {
+  const dispatch = useDispatch();
+  const { loading, contactData } = useContact();
+
+  useEffect(() => {
+    document.title = "Fuerza Catolica - Contacto";
+    Object.keys(contactData).length === 0 && dispatch(fetchReadContactData());
+  }, []);
+
   return (
     <div>
       <Header></Header>
