@@ -42,6 +42,17 @@ const Header = () => {
               >
                 <li>
                   <NavLink
+                    to="/fuerza-catolica/"
+                    className={({ isActive }) =>
+                      isActive ? "list__link list__link--active" : "list__link"
+                    }
+                    onClick={hideMenu}
+                  >
+                    Inicio
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
                     to="/fuerza-catolica/us"
                     className={({ isActive }) =>
                       isActive ? "list__link list__link--active" : "list__link"
@@ -79,7 +90,7 @@ const Header = () => {
         className="d-flex justify-content-center align-items-center"
         style={{ height: "25vh" }}
       >
-        <h1>Bienvenido: admin</h1>
+        <h4>Bienvenido: admin</h4>
       </div>
     </div>
   );
