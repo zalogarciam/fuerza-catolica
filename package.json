@@ -2,6 +2,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.2",
     "axios": "^1.2.6",
+    "google-map-react": "^2.2.0",
     "react-redux": "^8.0.5"
   }
 }

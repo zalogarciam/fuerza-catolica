@@ -4,11 +4,11 @@ import { fetchReadContactData } from "../thunks/contactThunk";
 const initialState = {
   loading: false,
   error: {},
-  contactData: {}
+  contactData: {},
 };
 
 export const contactSlice = createSlice({
-  name: 'contact',
+  name: "contact",
   initialState,
   extraReducers: (builder) => {
     builder.addCase(fetchReadContactData.pending, (state) => {
@@ -17,14 +17,14 @@ export const contactSlice = createSlice({
     builder.addCase(fetchReadContactData.fulfilled, (state, action) => {
       state.loading = false;
       state.error = {};
-      state.contactData = action.payload.data;
+      state.contactData = action.payload;
     });
     builder.addCase(fetchReadContactData.rejected, (state, action) => {
       state.loading = false;
       state.error = action.payload;
       state.contactData = {};
     });
-  }
+  },
 });
 
 export default contactSlice.reducer;

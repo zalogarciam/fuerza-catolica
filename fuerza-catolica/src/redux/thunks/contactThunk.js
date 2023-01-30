@@ -7,9 +7,10 @@ export const fetchReadContactData = createAsyncThunk(
     try {
       const options = {
         method: "GET",
-        url: "/contacto?populate=componentes,imagen,hero.banner,formulario",
+        url: "https://jsonplaceholder.typicode.com/comments/1",
       };
       const { data } = await axiosInstance(options);
+      console.log(data);
       return data;
     } catch (error) {
       return rejectWithValue(error);

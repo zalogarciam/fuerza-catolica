@@ -7,7 +7,7 @@ export const fetchReadAboutUsData = createAsyncThunk(
     try {
       const options = {
         method: "GET",
-        url: "/sobre-nosotros?populate=foto,logo,shortcut",
+        url: "https://jsonplaceholder.typicode.com/posts",
       };
       const { data } = await axiosInstance(options);
       return data;

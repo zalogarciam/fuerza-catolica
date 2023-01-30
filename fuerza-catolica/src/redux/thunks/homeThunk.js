@@ -7,7 +7,7 @@ export const fetchReadHeroProducts = createAsyncThunk(
     try {
       const options = {
         method: "GET",
-        url: `/productos?filters[posicion][slug][$eq]=cabecera&populate=subcategoria,marca,imagen`,
+        url: `/posts`,
       };
       const { data } = await axiosInstance(options);
       return data.data ?? [];
@@ -23,7 +23,7 @@ export const fetchReadBestSellersProducts = createAsyncThunk(
     try {
       const options = {
         method: "GET",
-        url: `/productos?filters[posicion][slug][$eq]=mas-vendidos&populate=marca,imagen`,
+        url: `/posts`,
       };
       const { data } = await axiosInstance(options);
       return data.data ?? [];
