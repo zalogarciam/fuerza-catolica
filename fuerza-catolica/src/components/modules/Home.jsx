@@ -21,7 +21,7 @@ const Home = () => {
         <br></br>
         <div className="f-elements--center" style={{ columns: "2 auto" }}>
           {Object.entries(homeData)
-            .slice(0, 8)
+            .slice(0, 6)
             .map(([key, value]) => (
               <div key={value.id} style={{ textAlign: "center" }}>
                 <h5>{value.title}</h5>

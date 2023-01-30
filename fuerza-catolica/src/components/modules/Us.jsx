@@ -33,7 +33,7 @@ const Us = () => {
           <div>
             <div>
               {Object.entries(aboutUsData)
-                .slice(0, 4)
+                .slice(0, 3)
                 .map(([key, value]) => (
                   <div key={value.id}>
                     <h5>{value.title}</h5>
@@ -48,7 +48,7 @@ const Us = () => {
         <div>
           <div>
             {Object.entries(aboutUsData)
-              .slice(10, 14)
+              .slice(10, 13)
               .map(([key, value]) => (
                 <div key={value.id}>
                   <h5>{value.title}</h5>
