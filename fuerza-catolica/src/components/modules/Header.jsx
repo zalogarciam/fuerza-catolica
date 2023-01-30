@@ -18,7 +18,7 @@ const Header = () => {
   };
 
   return (
-    <div>
+    <div style={{ height: "15vh" }}>
       <header className="header" ref={header}>
         <nav className="nav">
           <div className="container f-elements f-elements--header">
@@ -42,7 +42,7 @@ const Header = () => {
               >
                 <li>
                   <NavLink
-                    to="/fuerza-catolica/"
+                    to="/fuerza-catolica/home"
                     className={({ isActive }) =>
                       isActive ? "list__link list__link--active" : "list__link"
                     }

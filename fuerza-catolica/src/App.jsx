@@ -8,6 +8,7 @@ import Us from "./components/modules/Us";
 import Contact from "./components/modules/Contact";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
+import Home from "./components/modules/Home";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/fuerza-catolica" element={<Login />} />
-          <Route path="/fuerza-catolica/home" element={<Header />} />
+          <Route path="/fuerza-catolica/home" element={<Home />} />
           <Route path="/fuerza-catolica/us" element={<Us />} />
           <Route path="/fuerza-catolica/contact" element={<Contact />} />
           <Route path="*" element={<p>Not found 404</p>} />

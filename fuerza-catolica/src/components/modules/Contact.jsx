@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import useContact from "../../hooks/useContact";
 import { fetchReadContactData } from "../../redux/thunks/contactThunk";
 import LoadersModal from "../common/LoadersModal";
+import Footer from "./Footer";
 
 const Contact = () => {
   const dispatch = useDispatch();
@@ -17,7 +18,7 @@ const Contact = () => {
       <Header></Header>
       <div
         className="container f-elements f-elements--header"
-        style={{ height: "50vh" }}
+        style={{ height: "60vh" }}
       >
         <>
           {loading && <LoadersModal />}
@@ -81,7 +82,6 @@ const Contact = () => {
                       <a
                         className="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
                         href={`mailto:gegarciam95@gmail.com`}
-                        Name="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
                         type="submit"
                         style={{ border: "5px" }}
                       >
@@ -95,6 +95,7 @@ const Contact = () => {
           </div>
         </>
       </div>
+      <Footer></Footer>
     </div>
   );
 };
