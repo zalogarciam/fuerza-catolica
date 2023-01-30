@@ -10,7 +10,7 @@ export const fetchReadContactData = createAsyncThunk(
         url: "https://jsonplaceholder.typicode.com/comments/1",
       };
       const { data } = await axiosInstance(options);
-      console.log(data);
+      console.log(data.data);
       return data;
     } catch (error) {
       return rejectWithValue(error);

@@ -4,7 +4,7 @@ import { fetchHomeData } from "../thunks/homeThunk";
 const initialState = {
   loading: false,
   error: {},
-  heroProducts: [],
+  homeData: [],
 };
 
 export const homeSlice = createSlice({
@@ -18,12 +18,12 @@ export const homeSlice = createSlice({
     builder.addCase(fetchHomeData.fulfilled, (state, { payload }) => {
       state.loading = false;
       state.error = {};
-      state.heroProducts = payload;
+      state.homeData = payload;
     });
     builder.addCase(fetchHomeData.rejected, (state, { payload }) => {
       state.loading = false;
       state.error = payload;
-      state.heroProducts = [];
+      state.homeData = [];
     });
   },
 });
